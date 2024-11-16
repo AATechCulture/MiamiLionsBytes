@@ -4,7 +4,7 @@ import FormData from 'form-data';
 import { ChecklistSchema } from '../utils/checklist-helpers';
 
 //**TODO: add to heroku backend to prevent api key being sent client side*/
-const OPENAI_API_KEY = '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';
+const OPENI_API_KEY = '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';
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
 const OPENAI_API_AUDIO_URL = 'https://api.openai.com/v1/audio/transcriptions';
 
@@ -28,7 +28,7 @@ export const transcribeAudio = async (audioUri: string): Promise<string> => {
     // Make the API request
     const response = await axios.post(OPENAI_API_AUDIO_URL, formData, {
       headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
+        'Authorization': `Bearer ${OPENAI_API_EY}`,
         'Content-Type': 'multipart/form-data',
       },
     });
