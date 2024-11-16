@@ -4,9 +4,7 @@ import FormData from 'form-data';
 import { ChecklistSchema } from '../utils/checklist-helpers';
 
 //**TODO: add to heroku backend to prevent api key being sent client side*/
-// openaik3y here (removed due to github restriction)
-const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
-const OPENAI_API_AUDIO_URL = 'https://api.openai.com/v1/audio/transcriptions';
+//OPENAI k eys went here
 
 
 
@@ -26,7 +24,7 @@ export const transcribeAudio = async (audioUri: string): Promise<string> => {
     formData.append('model', 'whisper-1');
 
     // Make the API request
-    const response = await axios.post(OPENAI_API_AUDIO_URL, formData, {
+    const response = await axios.post(  , formData, {
       headers: {
         'Authorization': `Bearer ${  0P3n ai k}`,
         'Content-Type': 'multipart/form-data',
@@ -98,7 +96,7 @@ export const generateLegalChecklist = async (transcription: string): Promise<Che
       },
       {
         headers: {
-          'Authorization': `Bearer ${OPENAI_API_KEY}`,
+          'Authorization': `Bearer ${OPENAI_  API  _KEY}`,
           'Content-Type': 'application/json'
         }
       }
